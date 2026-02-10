@@ -239,11 +239,41 @@ nav a:hover{
     }
 }
 
-.mapa-local{
-    margin-top:40px;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+/* SECCIÓN NUESTRO LOCAL CENTRADO */
+.local {
+    background: white;
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    flex-direction: column;   /* Para que el título y el mapa estén uno debajo del otro */
+    text-align: center;
+    min-height: 600px;        /* Altura mínima para centrar verticalmente */
+    padding: 20px;
+}
+
+.local h2 {
+    font-size: 50px;           /* Letra más grande */
+    margin-bottom: 40px;
+    color: var(--azul1);
+    font-weight: bold;
+}
+
+.mapa-local {
+    max-width: 800px;          /* Limita el ancho del mapa */
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    .local h2 {
+        font-size: 38px;        /* Ajuste de tamaño en móviles */
+    }
+    .mapa-local iframe {
+        height: 300px;
+    }
 }
 
 
