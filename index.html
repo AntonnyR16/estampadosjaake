@@ -263,6 +263,47 @@ nav a:hover{
         align-items:center;
     }
 }
+
+/* TESTIMONIOS */
+.testimonios{
+    padding:80px;
+    background: var(--gris);
+    text-align:center;
+}
+
+.testimonios h2{
+    font-size:38px;
+    margin-bottom:40px;
+    color: var(--azul1);
+}
+
+.cards-testimonios{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.card-testimonio{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    width:280px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.card-testimonio:hover{
+    transform:translateY(-8px);
+}
+
+.card-testimonio h4{
+    margin-top:20px;
+    font-weight:600;
+    color: var(--azul2);
+}
+
 </style>
 
 </head>
@@ -342,6 +383,26 @@ Creamos camisetas, gorras y prendas únicas para empresas, eventos y uso persona
     <p>Sábados</p>
     <p>9:00 am - 12:00 pm</p>
 </div>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios" id="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="cards-testimonios">
+        <div class="card-testimonio">
+            <p>"Excelente calidad en los bordados, mi camiseta quedó perfecta. ¡Recomendados!"</p>
+            <h4>- Ana G.</h4>
+        </div>
+        <div class="card-testimonio">
+            <p>"Muy buena atención y diseños personalizados increíbles. Volveré seguro."</p>
+            <h4>- Carlos M.</h4>
+        </div>
+        <div class="card-testimonio">
+            <p>"El pedido llegó rápido y con colores vibrantes, 100% recomendado."</p>
+            <h4>- Laura P.</h4>
+        </div>
+    </div>
+</section>
+
 
 <!-- BOTON WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/573014836020" target="_blank">
