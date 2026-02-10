@@ -3,22 +3,37 @@
 <head>
     <title>Estampados y Bordados Jack</title>
 
+    <!-- Fuente profesional -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #F3EAD5; /* fondo crema */
-            margin: 0;
-            color: #002A3A; /* azul oscuro */
+        /* PALETA DE COLORES */
+        :root {
+            --celeste: #7EC8E3;
+            --turquesa: #1E9BB8;
+            --azul-oscuro: #002A3A;
+            --amarillo: #F9B233;
+            --naranja: #F57C20;
+            --fondo: #F3EAD5;
         }
 
-        /* Barra de menú */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--fondo);
+            margin: 0;
+            color: var(--azul-oscuro);
+        }
+
+        /* MENU SUPERIOR */
         .navbar {
-            background-color: #002A3A;
-            padding: 15px;
+            background-color: var(--azul-oscuro);
+            padding: 15px 40px;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
         }
 
         .navbar a {
@@ -26,57 +41,40 @@
             text-decoration: none;
             margin-left: 20px;
             font-weight: bold;
-            padding: 8px 12px;
+            padding: 8px 15px;
             border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
         }
 
-        .navbar a:hover {
-            background-color: #F9B233; /* amarillo */
-            color: #002A3A;
+        /* Animaciones botones */
+        .navbar a:hover, .btn:hover {
+            background-color: var(--amarillo);
+            color: var(--azul-oscuro);
+            transform: scale(1.1);
+            box-shadow: 0 0 10px var(--amarillo);
         }
 
-        /* Título principal */
+        .navbar a:active, .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* TITULO PRINCIPAL */
         h1 {
-            font-size: 60px;
+            font-size: 65px;
             text-align: left;
             margin-left: 40px;
-            margin-top: 50px;
-            color: #1E9BB8; /* turquesa */
+            margin-top: 120px;
+            color: var(--turquesa);
         }
 
         p {
             margin-left: 40px;
             font-size: 20px;
-            color: #002A3A;
         }
 
-        /* Botón */
+        /* BOTON PRINCIPAL */
         .btn {
             margin-left: 40px;
-            padding: 12px 25px;
-            background-color: #F57C20; /* naranja */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #F9B233; /* amarillo */
-            color: #002A3A;
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- MENU -->
-    <div class="navbar">
-        <a href="#">INICIO</a>
-    
-    <div class="navbar">
-        <a href="#">MENU</a>
-
-    <div class="navbar">
-        <a href="#">CONTACTANOS</a>
+            margin-top: 20px;
+            padding: 12px 30px;
