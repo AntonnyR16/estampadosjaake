@@ -14,7 +14,7 @@
             --azul-oscuro: #002A3A;
             --amarillo: #F9B233;
             --naranja: #F57C20;
-            --fondo: #F3EAD5;
+            --fondo: #ffffff;
         }
 
         body {
@@ -78,3 +78,77 @@
             margin-left: 40px;
             margin-top: 20px;
             padding: 12px 30px;
+            background-color: var(--naranja);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 60px 40px;
+        }
+
+        h2 {
+            color: var(--azul-oscuro);
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <div class="navbar">
+        <a href="#inicio">INICIO</a>
+        <a href="#menu">MENÚ</a>
+        <a href="#servicios">SERVICIOS</a>
+        <a href="#contacto">CONTACTO</a>
+    </div>
+
+    <!-- INICIO -->
+    <section id="inicio">
+        <h1>ESTAMPADOS Y BORDADOS JACK</h1>
+        <p>Especialistas en estampados y bordados personalizados para camisetas, gorras y más.</p>
+
+        <!-- BOTON WHATSAPP -->
+        <button class="btn" onclick="window.open('https://wa.me/573000000000')">
+            Cotizar ahora
+        </button>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu">
+        <h2>Menú</h2>
+        <p>Estampados • Bordados • Sublimación • Impresión digital</p>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <p>✔ Personalización de camisetas</p>
+        <p>✔ Bordado de gorras y uniformes</p>
+        <p>✔ Diseño gráfico profesional</p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>📞 WhatsApp: 300 000 0000</p>
+        <p>📍 Dirección: Cra 38 #51-23, Barranquilla, Colombia</p>
+    </section>
+
+    <h1> HORARIOS DE ATENCION
+        <p> LUNES A VIERNES
+        8am - 12m
+        2pm - 6pm
+        SABADOS 
+        9am - 12pm </p>
+    </h1>
+
+</body>
+</html>
