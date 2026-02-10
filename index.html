@@ -185,6 +185,32 @@ nav a:hover{
     font-size:32px;
 }
 
+/* IMAGEN DEL LOCAL */
+.local{
+    padding:80px;
+    background:white;
+    text-align:center;
+}
+
+.local h2{
+    font-size:38px;
+    margin-bottom:30px;
+    color: var(--azul1);
+}
+
+.foto-local{
+    display:flex;
+    justify-content:center; /* Centra la imagen */
+}
+
+.foto-local img{
+    width:80%;
+    max-width:600px;
+    border-radius:15px;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
 /* HORARIOS */
 .horarios{
     background:white;
@@ -296,6 +322,14 @@ Creamos camisetas, gorras y prendas únicas para empresas, eventos y uso persona
     <h2>Contacto</h2>
     <p>📞 WhatsApp: 301 4836020</p>
     <p>📍 Cra 38 #51-23, Barranquilla, Colombia</p>
+</section>
+
+<!-- LOCAL -->
+<section class="local" id="local">
+    <h2>Nuestro Local</h2>
+    <div class="foto-local">
+        <img src="local.png" alt="Imagen del local">
+    </div>
 </section>
 
 <!-- HORARIOS -->
