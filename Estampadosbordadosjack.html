@@ -1,176 +1,317 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Estampados y Bordados Jack</title>
+<meta charset="UTF-8">
+<title>Estampados y Bordados Jack</title>
 
-    <!-- Fuente profesional -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <style>
-        /* PALETA DE COLORES */
-        :root {
-            --celeste: #7EC8E3;
-            --turquesa: #1E9BB8;
-            --azul-oscuro: #002A3A;
-            --amarillo: #F9B233;
-            --naranja: #F57C20;
-            --fondo: #ffffff;
-        }
+<style>
+:root {
+    --azul1:#0b3c5d;
+    --azul2:#1E9BB8;
+    --naranja:#F57C20;
+    --gris:#f7f7f7;
+}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--fondo);
-            margin: 0;
-            color: var(--azul-oscuro);
-        }
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-        /* MENU SUPERIOR */
-        .navbar {
-            background-color: var(--azul-oscuro);
-            padding: 15px 40px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+body{
+    background:white;
+}
 
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: 0.3s;
-            cursor: pointer;
-        }
+/* NAVBAR */
+header{
+    background: linear-gradient(90deg, var(--azul1), var(--azul2));
+    padding:12px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
 
-        .navbar a:hover, .btn:hover {
-            background-color: var(--amarillo);
-            color: var(--azul-oscuro);
-            transform: scale(1.1);
-            box-shadow: 0 0 10px var(--amarillo);
-        }
+header img{
+    height:55px;
+}
 
-        .navbar a:active, .btn:active {
-            transform: scale(0.95);
-        }
+nav a{
+    color:white;
+    margin-left:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
 
-        /* TITULO PRINCIPAL */
-        h1 {
-            font-size: 65px;
-            text-align: left;
-            margin-left: 40px;
-            margin-top: 120px;
-            color: var(--turquesa);
-        }
+nav a:hover{
+    color:#FFD700;
+}
 
-        p {
-            margin-left: 40px;
-            font-size: 20px;
-        }
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:140px 90px 80px;
+    background:white;
+}
 
-        /* BOTON PRINCIPAL */
-        .btn {
-            margin-left: 40px;
-            margin-top: 20px;
-            padding: 12px 30px;
-            background-color: var(--naranja);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+/* TEXTO IZQUIERDA */
+.texto{
+    width:55%;
+}
 
-        /* SECCIONES */
-        section {
-            padding: 60px 40px;
-        }
+.texto h1{
+    font-size:55px;
+    font-weight:700;
+    color:var(--azul1);
+}
 
-        h2 {
-            font-size: 30px;
-            color: var(--azul-oscuro);
-        }
+.texto span{
+    color:var(--azul2);
+}
 
-        /* HORARIOS */
-        .horarios {
-            color: black;
-            text-align: center;
-            margin-top: 50px;
-            font-family: Arial, sans-serif;
-            padding-bottom: 30px;
-        }
+.texto p{
+    font-size:18px;
+    margin:20px 0 30px;
+    color:#444;
+}
 
-        .horarios h2 {
-            font-size: 28px;
-            font-weight: bold;
-        }
+/* BOTON */
+.btn{
+    background: var(--naranja);
+    color:white;
+    padding:15px 35px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
 
-        .horarios p {
-            font-size: 18px;
-            margin: 4px 0;
-        }
+.btn:hover{
+    background:#ff9c3c;
+    transform:translateY(-3px) scale(1.05);
+}
 
-    </style>
+/* IMAGEN DERECHA (45%) */
+.hero img{
+    width:45%;
+    max-width:520px;
+    border-radius:18px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.hero img:hover{
+    transform:scale(1.05);
+}
+
+/* SERVICIOS */
+.servicios{
+    padding:80px;
+    background:var(--gris);
+}
+
+.servicios h2{
+    font-size:38px;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    text-align:center;
+    width:220px;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+/* GALERIA */
+.galeria{
+    padding:80px;
+}
+
+.galeria h2{
+    font-size:38px;
+    margin-bottom:30px;
+}
+
+.fotos{
+    display:flex;
+    gap:25px;
+}
+
+.fotos img{
+    width:260px;
+    border-radius:15px;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.fotos img:hover{
+    transform:scale(1.07);
+}
+
+/* CONTACTO */
+.contacto{
+    padding:70px;
+    background:var(--gris);
+}
+
+.contacto h2{
+    font-size:32px;
+}
+
+/* HORARIOS */
+.horarios{
+    background:white;
+    padding:50px;
+    text-align:center;
+}
+
+.horarios h2{
+    font-size:30px;
+}
+
+/* BOTON WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 25px;
+    border-radius:50px;
+    font-weight:bold;
+    text-decoration:none;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:120px 30px 60px;
+    }
+
+    .texto{
+        width:100%;
+    }
+
+    .hero img{
+        width:90%;
+        margin-top:30px;
+    }
+
+    .cards, .fotos{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+
 </head>
-
 <body>
 
-    <!-- MENU -->
-    <div class="navbar">
+<!-- MENU -->
+<header>
+    <img src="logo.png.">
+    <nav>
         <a href="#inicio">INICIO</a>
-        <a href="#menu">MENÚ</a>
         <a href="#servicios">SERVICIOS</a>
+        <a href="#galeria">GALERÍA</a>
         <a href="#contacto">CONTACTO</a>
-    </div>
+    </nav>
+</header>
 
-    <!-- INICIO -->
-    <section id="inicio">
-        <h1>ESTAMPADOS Y BORDADOS JACK</h1>
-        <p>Especialistas en estampados y bordados personalizados para camisetas, gorras y más.</p>
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <div class="texto">
+        <h1>ESTAMPADOS Y <br><span>BORDADOS JACK</span></h1>
+        <p>Diseño, calidad y personalización sin límites</p>
+        <p> Somos especialistas en estampados y bordados personalizados de alta calidad.
+Creamos camisetas, gorras y prendas únicas para empresas, eventos y uso personal, con diseños modernos y duraderos que hacen destacar tu marca o estilo.</p>
 
-        <button class="btn" onclick="window.open('https://wa.me/573000000000')">
+        <button class="btn" onclick="window.open('https://wa.me/573014836020')">
             COTIZA AHORA
         </button>
-    </section>
-
-    <!-- MENU -->
-    <section id="menu">
-        <h2>Menú</h2>
-        <p>Estampados • Bordados • Sublimación • Impresión digital</p>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <p>✔ Personalización de camisetas</p>
-        <p>✔ Bordado de gorras y uniformes</p>
-        <p>✔ Diseño gráfico profesional</p>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>📞 WhatsApp: 300 000 0000</p>
-        <p>📍 Cra 38 #51-23, Barranquilla, Colombia</p>
-    </section>
-
-    <!-- HORARIOS AL FINAL -->
-    <div class="horarios">
-        <h2>HORARIOS DE ATENCIÓN</h2>
-        <p>Lunes a Viernes</p>
-        <p>8:00 am - 12:00 m</p>
-        <p>2:00 pm - 6:00 pm</p>
-        <br>
-        <p>Sábados</p>
-        <p>9:00 am - 12:00 pm</p>
     </div>
+
+    <!-- TU IMAGEN -->
+    <img src="camiseta.png">
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios" id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+        <div class="card"> Estampados</div>
+        <div class="card"> Bordados</div>
+        <div class="card"> Sublimación</div>
+    </div>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria" id="galeria">
+    <h2>Trabajos Realizados</h2>
+    <div class="fotos">
+        <img src="trabajo1.png">
+        <img src="trabajo2.png">
+        <img src="trabajo3.png">
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+    <h2>Contacto</h2>
+    <p>📞 WhatsApp: 301 4836020</p>
+    <p>📍 Cra 38 #51-23, Barranquilla, Colombia</p>
+</section>
+
+<!-- HORARIOS -->
+<div class="horarios">
+    <h2>HORARIOS DE ATENCIÓN</h2>
+    <p>Lunes a Viernes</p>
+    <p>8:00 am - 12:00 m</p>
+    <p>2:00 pm - 6:00 pm</p>
+    <br>
+    <p>Sábados</p>
+    <p>9:00 am - 12:00 pm</p>
+</div>
+
+<!-- BOTON WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/573014836020" target="_blank">
+💬 WhatsApp
+</a>
 
 </body>
 </html>
