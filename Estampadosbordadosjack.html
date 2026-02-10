@@ -34,6 +34,7 @@
             position: fixed;
             width: 100%;
             top: 0;
+            z-index: 1000;
         }
 
         .navbar a {
@@ -47,7 +48,6 @@
             cursor: pointer;
         }
 
-        /* Animaciones botones */
         .navbar a:hover, .btn:hover {
             background-color: var(--amarillo);
             color: var(--azul-oscuro);
@@ -94,9 +94,29 @@
         }
 
         h2 {
-            color: var(--azul-oscuro);
             font-size: 30px;
+            color: var(--azul-oscuro);
         }
+
+        /* HORARIOS */
+        .horarios {
+            color: black;
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+            padding-bottom: 30px;
+        }
+
+        .horarios h2 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .horarios p {
+            font-size: 18px;
+            margin: 4px 0;
+        }
+
     </style>
 </head>
 
@@ -115,9 +135,8 @@
         <h1>ESTAMPADOS Y BORDADOS JACK</h1>
         <p>Especialistas en estampados y bordados personalizados para camisetas, gorras y más.</p>
 
-        <!-- BOTON WHATSAPP -->
         <button class="btn" onclick="window.open('https://wa.me/573000000000')">
-            Cotizar ahora
+            COTIZA AHORA
         </button>
     </section>
 
@@ -139,16 +158,19 @@
     <section id="contacto">
         <h2>Contacto</h2>
         <p>📞 WhatsApp: 300 000 0000</p>
-        <p>📍 Dirección: Cra 38 #51-23, Barranquilla, Colombia</p>
+        <p>📍 Cra 38 #51-23, Barranquilla, Colombia</p>
     </section>
 
-    <h1> HORARIOS DE ATENCION
-        <p> LUNES A VIERNES
-        8am - 12m
-        2pm - 6pm
-        SABADOS 
-        9am - 12pm </p>
-    </h1>
+    <!-- HORARIOS AL FINAL -->
+    <div class="horarios">
+        <h2>HORARIOS DE ATENCIÓN</h2>
+        <p>Lunes a Viernes</p>
+        <p>8:00 am - 12:00 m</p>
+        <p>2:00 pm - 6:00 pm</p>
+        <br>
+        <p>Sábados</p>
+        <p>9:00 am - 12:00 pm</p>
+    </div>
 
 </body>
 </html>
